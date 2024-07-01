@@ -1,0 +1,118 @@
+.problemStatementContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.problemStatement {
+  width: 50%;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-y: auto;
+}
+
+.solutionEditor {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--editor-bg-color);
+}
+
+.headers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button.show {
+  background-color: #0056b3;
+}
+
+.solutionsList {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.solutionItem {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: var(--item-bg-color);
+}
+
+.solutionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.solutionContent {
+  display: none;
+}
+
+.solutionContent.show {
+  display: block;
+}
+
+.solutionInput {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  border: none;
+  resize: none;
+  height: calc(100vh - 100px); /* Adjust height as needed */
+}
+
+.comments {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--comments-bg-color);
+  color: var(--comments-text-color);
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+textarea[name="commentInput"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  border: 1px solid #ccc;
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --editor-bg-color: #f7f7f7;
+  --item-bg-color: #fff;
+  --input-bg-color: #fff;
+  --input-text-color: #000;
+  --comments-bg-color: #f1f1f1;
+  --comments-text-color: #000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #d4d4d4;
+  --editor-bg-color: #1e1e1e;
+  --item-bg-color: #252526;
+  --input-bg-color: #333;
+  --input-text-color: #d4d4d4;
+  --comments-bg-color: #333;
+  --comments-text-color: #d4d4d4;
+}
